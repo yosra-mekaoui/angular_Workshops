@@ -12,7 +12,10 @@ const routes: Routes = [
   {path:'products', component:ProductsListComponent},
   {path:'users', component:UsersListComponent},
   {path:'updateUser/:param', component:UpdateUserComponent},
-  {path:'**', component:NotFoundComponent}
+{path:'providers',
+loadChildren:()=>import('./provider/provider.module').then(m=>m.ProviderModule)
+},
+{path:'**', component:NotFoundComponent}
 ];
 
 @NgModule({

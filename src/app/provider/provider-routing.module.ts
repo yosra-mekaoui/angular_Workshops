@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProviderlistComponent } from './providerlist/providerlist.component';
+import { ProviderListComponent } from './provider-list/provider-list.component';
 
 const routes: Routes = [
-  {path: 'provider',
-  component:ProviderlistComponent}
+  {path: '',
+  component:ProviderListComponent}
 ];
 
 @NgModule({

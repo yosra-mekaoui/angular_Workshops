@@ -42,8 +42,9 @@
                       <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
                     </span>
                   </a>
-                  <a class="table-link" [routerLink]="['/updateUser', user.idCustomer] "
-                  (quaryParams)="{name:user.firstName,email:user.email}">
+                  <a class="table-link" [routerLink]="['/updateUser',
+                    user.idCustomer]"
+                    [queryParams]="{name:user.firstName,email: user.email}">
                     <span class="fa-stack">
                       <i class="fa fa-square fa-stack-2x"></i>
                       <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
