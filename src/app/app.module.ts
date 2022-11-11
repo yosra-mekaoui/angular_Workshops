@@ -9,7 +9,8 @@ import { UpdateUserComponent } from './user/update-user/update-user.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { UserServiceService } from './Core/Services/user-service.service';
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
