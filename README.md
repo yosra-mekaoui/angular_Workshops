@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px" height="50px"> Angular Project
+<img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px" height="50px"> # Angular Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
 
