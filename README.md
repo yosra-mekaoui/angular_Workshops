@@ -1,5 +1,4 @@
 # 4Twin8DataBinding
-![ang](https://user-images.githubusercontent.com/61566287/196161102-1dedc751-aeca-4124-abc1-a28cfea82f39.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
 
@@ -26,7 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-![image_2022-10-17_131520980](https://user-images.githubusercontent.com/61566287/196163495-f5ca28b7-9740-4dc2-87c4-db3f92b92524.png)
 # Routage
 ![ang](https://user-images.githubusercontent.com/61566287/196161102-1dedc751-aeca-4124-abc1-a28cfea82f39.PNG)
 ![image_2022-10-17_131520980](https://user-images.githubusercontent.com/61566287/196163495-f5ca28b7-9740-4dc2-87c4-db3f92b92524.png)
