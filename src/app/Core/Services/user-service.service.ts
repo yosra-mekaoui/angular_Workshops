@@ -1,9 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../Models/user';
-import { HttpClient } from '@angular/common/http';
-/*Une seule instance du service disponible dans toute l’application
-fournir le service au niveau
-racine.*/
+
 @Injectable(
 //   {
 //   providedIn: 'root'
@@ -12,47 +10,62 @@ racine.*/
 export class UserServiceService {
 
 
-usersList: User[]= []
+usersList: User[]= [];
 
-  constructor(private http: HttpClient) { }
-  //URL backend
-  url = "http://localhost:3000/User";
+
+  constructor( private http: HttpClient ) { }
+  //URL du Backend
+  url = "http://localhost:3000/users";
+
   getAllUsers(){
-    return this.http.get<User[]>(this.url);
-  }
-  deleteUser(id: number){
-    return this.http.delete(this.url + '/' + id);
-  }
-  
-  getUserById(id: number){
-    return this.http.get<User>(this.url + '/' + id);}
-
-    updateUser(u: User){
-      return this.http.put(this.url + '/' + u.id, u);
-    }
-    
-/*getAllUsers(){
-  return this.usersList;
-}
-*/
-
-
-  delete(user: User){
-     const index = this.usersList.indexOf(user, 0);
-if (index > -1) {
-   this.usersList.splice(index, 1);
-}
+   return this.http.get<User[]>(this.url);
   }
 
-  fetchNbInList(list: any, attribute:string, attributeVal: string){
+  deleteUser(id:Number){
+    return  this.http.delete(this.url+'/'+id);
+  }
 
-    let nb = 0;
-    for(let i = 0; i < list.length; i++){
-      if(list[i][attribute] === attributeVal){
-        nb++;
+  getUserById(id:Number){
+    return this.http.get<User>(this.url+'/'+id);
+  }
+
+  updateUser(u:User){
+    const ID = Number(u.id);
+    console.log(ID);
+
+     return this.http.put(this.url+'/'+ID, u);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetchNbInList(list: any, attribute:string, attributeVal: string){
+ let cpt =0;
+  for (let elt in list){
+      if(list[elt][attribute] === attributeVal){
+        cpt++;
       }
-    }
-    return nb;
   }
+return cpt;
+}
+
+
+
+
 
 }

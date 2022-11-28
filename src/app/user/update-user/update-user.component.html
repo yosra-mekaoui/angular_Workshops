@@ -2,4 +2,56 @@
   Here I read the value: {{myId}}
 </h2>
 
-<a [routerLink]="['user/updateUser', 3]">Update Next</a>
+
+
+<form [formGroup]="updateUserForm" (ngSubmit)="update()">
+  <div class="form-group">
+    <label for="fn">First Name</label>
+    <input type="text" class="form-control" id="fn" formControlName="firstName">
+  </div>
+
+
+  <div class="form-group">
+    <label for="fn">Last Name</label>
+    <input type="text" class="form-control" id="ln" formControlName="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="fn">BirthDate</label>
+    <input type="text" class="form-control" id="dob"
+      formControlName="birthDate">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"
+      formControlName="password"
+      placeholder="Password">
+  </div>
+
+
+  <div class="form-group">
+    <label for="fn">Profession</label>
+    <input type="text" class="form-control" id="profession"
+      formControlName="profession">
+  </div>
+
+  <div class="form-group">
+    <label for="fn">Account Category</label>
+    <input type="text" class="form-control" id="accountCategory"
+      formControlName="accountCategory">
+  </div>
+
+  <div class="form-group">
+    <label for="fn">Picture</label>
+    <input type="text" class="form-control" id="picture"
+      formControlName="picture">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

@@ -1,26 +1,37 @@
 {
-  "User": [
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Nour",
+      "lastName": " Kunis",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Admin",
+      "email": "mila@kunis.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
+      "profession": "Software Engineer"
+    },
     {
       "id": 2,
-      "firstName": "George",
-      "lastName": "Clooney",
+      "firstName": "test",
+      "lastName": " Kunis",
       "birthDate": "1999-06-30",
-      "accountCategory": "Customer",
-      "email": "marlon@brando.com",
+      "email": "mila@kunis.com",
       "password": "test",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar2.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "accountCategory": "Admin",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png"
     },
     {
       "id": 3,
       "firstName": "George",
-      "lastName": "Clooney",
+      "lastName": "Cloney",
       "birthDate": "1999-06-30",
-      "accountCategory": "Customer",
       "email": "marlon@brando.com",
       "password": "test",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "accountCategory": "Customer",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png"
     },
     {
       "id": 4,

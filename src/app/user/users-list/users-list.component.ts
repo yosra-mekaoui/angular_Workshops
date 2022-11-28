@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Console } from 'console';
 import { UserServiceService } from 'src/app/Core/Services/user-service.service';
+import { User7Service } from 'src/app/Core/Services/user7.service';
 import { User } from '../../Core/Models/user';
 
 @Component({
@@ -15,30 +15,25 @@ id= 5;
 // La variable permetant de récupérer la valeur de recherche
 filter!:string;
 
-  constructor( private route:Router, private userS: UserServiceService) { }
-listUsers:User[] = [];
+  constructor( private route:Router, private userS: UserServiceService, private user7: User7Service) { }
+
+  listUsers:User[] = [];
+
   ngOnInit(): void {
-   // this.listUsers= this.userS.getAllUsers();
-   // console.log(this.userS.fetchNbInList(this.userS.usersList,"accountCategory","Customer"));
-    this.getUser();
-  }
-  getUser(){
-  this.userS.getAllUsers().subscribe(data => this.listUsers = data);
- }
-  goToAdmin(){
-    this.route.navigate(['users/Admin']);
-
-  }
-
- /* deleteUser(user:User){
-this.userS.delete(user);
-  }*/
-  deleteUser(id:any){
-    this.userS.deleteUser(id).subscribe(
-      () => this.getUser() );
+        this.getUsers();
       }
-fetchNbInList(){
-  
-  console.log(this.userS.fetchNbInList(this.userS.usersList,"accountCategory","Customer"));
+
+   getUsers(){
+    this.user7.getAllUsers().subscribe(data => this.listUsers= data);
+   }
+
+
+deleteUser7(id:any){
+  this.user7.deleteUser(Number(id)).subscribe( () =>this.getUsers() );
 }
+
+
+goToAdmin(){
+    this.route.navigate(['users/Admin']);
+  }
 }

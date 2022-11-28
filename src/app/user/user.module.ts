@@ -7,6 +7,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserServiceService } from '../Core/Services/user-service.service';
+import { User7Service } from '../Core/Services/user7.service';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { UserServiceService } from '../Core/Services/user-service.service';
     UsersListComponent,
     AddUserComponent
   ],
-  providers:[UserServiceService],
+  providers:[UserServiceService, User7Service],
   imports: [
     CommonModule,
     UserRoutingModule,
